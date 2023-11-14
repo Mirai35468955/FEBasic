@@ -1,0 +1,93 @@
+/* インラインスタイルを使用しても横並びにできます */
+
+body {
+    text-align: center; /* コンテンツを水平方向に中央揃え */
+}
+
+header {
+    display: flex; /* 子要素を横に並べるためにFlexレイアウトを使用 */
+    align-items: center; /* 子要素を垂直方向に中央揃え */
+    background-color: #fff; /* 背景色を白色に設定 */
+    padding: 10px; /* 上下左右の余白を追加 */
+    max-width: 800px; /* ヘッダーの最大幅を設定 */
+    margin: 0 auto; /* ヘッダーを中央に寄せる */
+}
+
+h1 {
+    margin-right: auto; /* h1要素を右端に寄せる */
+}
+
+nav {
+    display: flex; /* ナビゲーション内のリストを水平に配置 */
+    justify-content: center; /* ナビゲーション内の要素を中央に配置 */
+    margin-right: 200px;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+}
+
+nav ul li {
+    margin-right: 20px;
+}
+
+nav ul li:last-child {
+    margin-right: 0;
+}
+
+nav a {
+    text-decoration: none;
+    color: #333;
+}
+
+main img {
+    opacity: 0.5; /* 画像の不透明度を設定（0.5は半透明） */
+}
+
+.image-container {
+    position: relative;
+    display: inline-block;
+    overflow-x: scroll; /* 水平スクロールを有効にする */
+    width: 100%; /* 画面幅いっぱいにコンテナを広げる */
+    max-height: 300px; /* コンテナの高さを必要に応じて調整 */
+    z-index: 999;
+}
+
+.image-scroll img {
+    width: auto; /* 幅は自動調整 */
+    height: 100%; /* 画像の高さを100%に設定 */
+    margin-right: 10px; /* 画像間のスペースを設定 */
+}
+
+.image-scroll {
+    display: flex;
+    /*flex-direction: row; /* 画像を横に並べる */
+    height: max-content; /* 画像が収まる最大の幅 */
+    transition: transform 0.3s ease; /* スクロールのアニメーション */
+}
+.overlay-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(255, 255, 255, 0.7);
+    padding: 10px;
+    font-size: 64px;
+    font-weight: bold;
+    white-space: nowrap;
+}
+
+
+/*Being relax*/
+.fixed-text {
+  position: fixed; /* 要素を固定位置に配置 */
+  top: 10px; /* 画面上部からの距離（適切な値に調整） */
+  left: 10px; /* 画面左部からの距離（適切な値に調整） */
+  background-color: rgba(255, 255, 255, 0.7); /* テキストの背景色と透明度（必要に応じて調整） */
+  padding: 10px; /* テキスト周りの余白（必要に応じて調整） */
+  font-size: 18px; /* テキストのフォントサイズ（必要に応じて調整） */
+  font-weight: bold; /* テキストの太字設定（必要に応じて調整） */
+  z-index: 999; /* 他の要素の上に表示するためのz-index（必要に応じて調整） */
+}
