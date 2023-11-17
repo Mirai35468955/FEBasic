@@ -1,12 +1,114 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<title>Page Title</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ページのタイトル</title>
+    <link rel="stylesheet" href="styles.css"> <!-- スタイルシートのリンク -->
 </head>
 <body>
+    <header>
+        <h1>Forests</h1>
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Service</a></li>
+                <li><a href="#">Contact</a></li>
+                <li><a href="./Game/game.html">Game</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>    
 
-<h1>This is a Heading</h1>
-<p>This is a paragraph.</p>
+        <div class="image-container">
+            <div class="image-scroll">
+                <img src="forest.jpg" alt="画像の代替テキスト">
+                <img src="forest.jpg" alt="画像の代替テキスト">
+                <img src="forest.jpg" alt="画像の代替テキスト">
+                <img src="forest.jpg" alt="画像の代替テキスト">
+                <img src="forest.jpg" alt="画像の代替テキスト">
+                <img src="forest.jpg" alt="画像の代替テキスト">
+                <img src="forest.jpg" alt="画像の代替テキスト">
+                <img src="forest.jpg" alt="画像の代替テキスト">
+                <img src="forest.jpg" alt="画像の代替テキスト">
+                <img src="forest.jpg" alt="画像の代替テキスト">
+                <!-- 他の画像をここに追加 -->
+            </div>
+            <div class="company">
+                <div class="company-name">
+                    Forest company
+                </div>
+                <div class="compnay-detail">
+                    Danang city
+                </div>
+            </div>
+            
+        </div>
 
+        
+            <!-- 既存のコンテンツを保持 -->
+            <div class="list-section">
+                <h2>Explanation:</h2>
+                <ul>
+                    <li>Company Name: Forest Company</li>
+                    <li>Job Description: Forest conservation and environmental protection activities</li>
+                    <li>Tasks: Monitoring forests, tree planting activities, providing environmental education programs, etc.</li>
+                    <!-- Add other explanations here -->
+                </ul>
+            </div>
+            
+            <div class="list-section">
+                <h2>Requirements:</h2>
+                <ul>
+                    <li>Educational Background: Bachelor's degree or higher</li>
+                    <li>Experience: Experience in environmental protection or forest conservation is a plus</li>
+                    <li>Communication Skills: Good communication skills</li>
+                    <li>Passion: Passion for the protection of the natural environment</li>
+                    <!-- Add other requirements here -->
+                </ul>
+            </div>
+                
+            <div class="cv-section">
+                <!-- Content for the CV section -->
+            
+                <h3>Submit Your CV</h3>
+                <form action="Enter_Destination_URL_Here" method="POST" enctype="multipart/form-data">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required>
+                    <br>
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                    <br>
+                    <label for="cv-file">CV Content (Choose a file):</label>
+                    <input type="file" id="cv-file" name="cv-file" accept=".pdf, .doc, .docx" required>
+                    <br>
+                    <input type="submit" value="Submit">
+                </form>
+            </div>
+
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="contact-info">
+                <h4>Contact Information</h4>
+                <p><strong>Company Name:</strong> Forest Company</p>
+                <p><strong>Address:</strong> Danang City</p>
+                <p><strong>Phone Number:</strong> 0123-456-789</p>
+                <p><strong>Email:</strong> info@forestcompany.com</p>
+            </div>
+            <div class="social-media">
+                <h4>Follow Us</h4>
+                <a href="#"><i class="fab fa-facebook-square"></i></a>
+                <a href="#"><i class="fab fa-twitter-square"></i></a>
+                <a href="#"><i class="fab fa-linkedin"></i></a>
+                <!-- Add other social media links -->
+            </div>
+        </div>
+        <p>&copy; 2023 Forest Company. All Rights Reserved.</p>
+    </footer>
+    
+
+    <script src="scripts.js"></script> <!-- JavaScriptファイルのリンク -->
 </body>
 </html>

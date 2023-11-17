@@ -1,7 +1,5 @@
-/* インラインスタイルを使用しても横並びにできます */
-
 body {
-    text-align: center; /* コンテンツを水平方向に中央揃え */
+    text-align: center; 
 }
 
 header {
@@ -42,52 +40,137 @@ nav a {
     color: #333;
 }
 
+nav li:nth-child(4) a:hover {
+    color: red; /* ホバー時のテキスト色を赤に変更（適宜変更可能） */
+    text-decoration: underline;
+    /* 他のスタイルを追加 */
+}
+
+
+/* リスト要素のリストスタイルを調整 */
+.list-section ul {
+    list-style-position: inside; /* リストアイテムの点を内側に配置 */
+    text-align: left; /* テキストを左寄せにする */
+    padding-left: 0; /* 左側の余白を0に設定 */
+}
+
+.list-section li {
+
+    margin-left: 200px; /* リストアイテムの左マージンを設定（点の位置を調整） */
+}
+/* タイトルを太字にする */
+h2 {
+    text-align: left; /* テキストを左寄せにする */
+    font-weight: bold;
+    margin-left: 160px;
+    margin-top: 50px;
+}
+
 main img {
-    opacity: 0.5; /* 画像の不透明度を設定（0.5は半透明） */
+    opacity: 0.7; /* 画像の不透明度を設定（0.5は半透明） */
 }
 
 .image-container {
     position: relative;
     display: inline-block;
-    overflow-x: scroll; /* 水平スクロールを有効にする */
-    width: 100%; /* 画面幅いっぱいにコンテナを広げる */
-    max-height: 300px; /* コンテナの高さを必要に応じて調整 */
-    z-index: 999;
+    width: 100%;
+    max-height: 300px;
 }
 
 .image-scroll img {
-    width: auto; /* 幅は自動調整 */
-    height: 100%; /* 画像の高さを100%に設定 */
-    margin-right: 10px; /* 画像間のスペースを設定 */
+    width: auto;
+    height: 100%;
+    margin-right: 1;
 }
+
+/*
+.image-scroll {
+    display: flex;
+    overflow-x: scroll;
+    height: max-content;
+    transition: transform 0.3s ease;
+}
+*/
 
 .image-scroll {
     display: flex;
-    /*flex-direction: row; /* 画像を横に並べる */
-    height: max-content; /* 画像が収まる最大の幅 */
-    transition: transform 0.3s ease; /* スクロールのアニメーション */
+    animation: scrollImage 20s linear infinite; /* 20秒ごとに無限にアニメーション実行 */
 }
-.overlay-text {
+
+@keyframes scrollImage {
+    0% {
+        transform: translateX(0); /* 初期位置 */
+    }
+    100% {
+        transform: translateX(-100%); /* 画像を左にスクロール */
+    }
+}
+
+.company {
     position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background-color: rgba(255, 255, 255, 0.7);
-    padding: 10px;
-    font-size: 64px;
+    top: 50%; /* コンテナの垂直中央に配置 */
+    left: 50%; /* コンテナの水平中央に配置 */
+    color: black;
+    position: absolute; /* 要素を固定位置に配置 */
+    transform: translate(-50%, -50%); /* 要素自体の中心を基準点に合わせる */
+    font-weight: bold; /* テキストの太字設定 */
+    z-index: 9999; /* 他の要素の上に表示するためのz-index */
+}
+
+.company-name {
+    background-color: rgba(255, 255, 255, 0); /* テキストの背景色と透明度 */
+    padding: 10px; /* テキスト周りの余白 */
+    font-size: 64px; /* テキストのフォントサイズ */
+}
+
+.company-detail {
+    background-color: rgba(255, 255, 255, 0); /* テキストの背景色と透明度 */
+    padding: 10px; /* テキスト周りの余白 */
+    font-size: 32px; /* テキストのフォントサイズ */
+}
+
+.cv-section {
+    background-color: #fff;
+    padding: 20px;
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: left; /* フォーム内のテキストを左寄せに */
+}
+
+.cv-section h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+    font-weight: bold; /* テキストの太字設定 */
+}
+
+.cv-section label {
     font-weight: bold;
-    white-space: nowrap;
 }
 
-
-/*Being relax*/
-.fixed-text {
-  position: fixed; /* 要素を固定位置に配置 */
-  top: 10px; /* 画面上部からの距離（適切な値に調整） */
-  left: 10px; /* 画面左部からの距離（適切な値に調整） */
-  background-color: rgba(255, 255, 255, 0.7); /* テキストの背景色と透明度（必要に応じて調整） */
-  padding: 10px; /* テキスト周りの余白（必要に応じて調整） */
-  font-size: 18px; /* テキストのフォントサイズ（必要に応じて調整） */
-  font-weight: bold; /* テキストの太字設定（必要に応じて調整） */
-  z-index: 999; /* 他の要素の上に表示するためのz-index（必要に応じて調整） */
+.cv-section input[type="text"],
+.cv-section input[type="email"],
+.cv-section input[type="file"],
+.cv-section textarea {
+    width: 100%;
+    padding: 5px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
 }
+
+.cv-section input[type="submit"] {
+    display: block; /* ボタンをブロック要素に変更 */
+    margin: 0 auto; /* 左右のマージンを自動で設定し、中央に配置 */
+    text-align: center;
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+.cv-section input[type="submit"]:hover {
+    background-color: #0056b3;
+}
+

@@ -1,14 +1,6 @@
-// JavaScriptファイル (scripts.js) 内
+var button = document.getElementById('myButton');
 
-const imageContainer = document.querySelector('.image-scroll');
-const scrollDistance = 300; // スクロール量（ピクセル単位）
-
-document.querySelector('.next-button').addEventListener('click', () => {
-    // 右にスクロール
-    imageContainer.scrollLeft += scrollDistance;
-});
-
-document.querySelector('.prev-button').addEventListener('click', () => {
-    // 左にスクロール
-    imageContainer.scrollLeft -= scrollDistance;
-});
+    button.addEventListener('click', function () {
+        alert('ボタンがクリックされました');
+        // ここに他のカスタムアクションを追加
+    });
